@@ -1,0 +1,26 @@
+.nav-tabs li a  {
+    color: #a09078;
+}
+
+.nav-tabs li > a:hover,
+.nav-tabs li > a:focus {
+    background-color: #C0E683;
+}
+
+.nav-line > li.active > a,
+.nav-line > li.active > a:hover,
+.nav-line > li.active > a:active,
+.nav-line > li.active > a:focus {
+    -moz-box-shadow: 0 3px 0 #B1D978;
+    -webkit-box-shadow: 0 3px 0 #B1D978;
+    box-shadow: 0 3px 0 #B1D978;
+    margin: 0;
+}
+
+.headerwrapper .header-right a {
+    color: #fff;    
+}
+
+.headerwrapper .header-right a:hover {
+    color: #C0E683;    
+}

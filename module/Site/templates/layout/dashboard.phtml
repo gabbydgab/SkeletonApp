@@ -1,0 +1,75 @@
+<?php 
+/**
+ * DO NOT CHANGE CURRENT PATH SETTINGS IF NOT FAMILIAR
+ */
+
+$this->plugin('basePath')->setBasePath("/");
+
+// CSS Stylesheets
+$favicon    = $this->basePath('assets/academe/img/favicon.ico');
+$style      = $this->basePath('assets/site/css/AdminLTE.min.css');
+$override   = $this->basePath('assets/site/css/skin-blue.min.css');
+$faIcon     = $this->basePath('assets/font-awesome/css/font-awesome.css');
+$bootstrap  = $this->basePath('assets/bootstrap/css/bootstrap.min.css');
+$bsTheme    = $this->basePath('assets/bootstrap/css/bootstrap-theme.min.css');
+
+// JavaScripts
+$jquery     = $this->basePath('assets/jquery/jquery.min.js');
+$jqueryui   = $this->basePath('assets/jquery-ui/jquery-ui.min.js');
+$bsJS       = $this->basePath('assets/bootstrap/js/bootstrap.min.js');
+$popover    = $this->basePath('assets/bootstrap/js/popover.js');
+$tooltip    = $this->basePath('assets/bootstrap/js/tooltip.js');
+$tab        = $this->basePath('assets/bootstrap/js/tab.js');
+$app        = $this->basePath('assets/site/js/app.min.js');
+$dashboard  = $this->basePath('assets/site/js/dashboard.js');
+?>
+
+<?php echo $this->doctype(); ?>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headMeta()
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+            ->appendName('viewport', 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no');
+        ?>
+        <?php echo $this->headTitle('Iligan Access Institute of Technology, Inc.')
+            ->setSeparator(' - ')
+            ->setAutoEscape(false);
+        ?>
+        <?php 
+            echo $this->headLink(['rel' => 'shortcut icon', 'href' => $favicon])
+                    ->prependStylesheet($override)
+                    ->prependStylesheet($style)
+                    ->prependStylesheet($faIcon)
+                    //->prependStylesheet($bsTheme)
+                    ->prependStylesheet($bootstrap)
+        ?>
+    </head>
+    <body class="hold-transition skin-blue sidebar-mini">        
+        <div class="wrapper">
+            <header class="main-header">
+             <?php echo $this->partial('partial/navigation/header'); ?>
+            </header>
+            <aside class="main-sidebar">
+                <?php echo $this->partial('partial/navigation/sidebar'); ?>
+            </aside>
+            <div class="content-wrapper">
+                <?php echo $this->content; ?>   
+            </div>
+            <footer class="main-footer">
+                <?php echo $this->partial('template/footer'); ?>                
+            </footer>
+        </div>
+        <?php 
+            echo $this->inlineScript() //prepend up here
+//                    ->prependFile($dashboard) 
+                    ->prependFile($app)
+                    ->prependFile($tab)
+                    ->prependFile($tooltip)
+//                    ->prependFile($popover)
+                    ->prependFile($bsJS)
+                    ->prependFile($jqueryui)
+                    ->prependFile($jquery);
+        ?>
+    </body>
+</html>

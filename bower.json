@@ -1,0 +1,19 @@
+{
+    "name": "codingmatters-academe-ui-dependencies",    
+    "homepage": "https://github.com/CodingMatters/Academe",
+    "authors": [
+        "gabbydgab <gamba@gabbydgab.com>"
+    ],
+    "description": "3rd party dependencies",
+    "moduleType": [
+        "globals"
+    ],
+    "license": "MIT",
+    "directory": "public/assets",
+    "dependencies": {
+        "jquery": "^2.1",
+        "jquery-ui": "^1.11",
+        "components-font-awesome": "^4.2",
+        "components-bootstrap": "^3.3"
+    }
+}
