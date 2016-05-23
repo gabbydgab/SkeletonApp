@@ -53,10 +53,6 @@
             "git submodule init",
             "git submodule update"
         ],
-        "post-create-project-cmd": [
-            "git submodule init",
-            "git submodule update"
-        ],
         "post-install-cmd"  : [            
             "@install-ui-component",
             "@check"
