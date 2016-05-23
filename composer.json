@@ -49,13 +49,15 @@
         }
     },
     "scripts": {
-        "pre-install-command": [
+        "post-root-package-install": [
             "git submodule init",
             "git submodule update"
         ],
-        "post-install-cmd"  : [
+        "post-create-project-cmd": [
             "git submodule init",
-            "git submodule update",
+            "git submodule update"
+        ],
+        "post-install-cmd"  : [            
             "@install-ui-component",
             "@check"
         ],
