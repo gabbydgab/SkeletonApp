@@ -49,7 +49,13 @@
         }
     },
     "scripts": {
+        "pre-install-command": [
+            "git submodule init",
+            "git submodule update"
+        ],
         "post-install-cmd"  : [
+            "git submodule init",
+            "git submodule update",
             "@install-ui-component",
             "@check"
         ],
@@ -74,8 +80,7 @@
             "cp -ar bower_components/jquery-ui public/assets/jquery-ui",
             "cp -ar bower_components/components-font-awesome public/assets/font-awesome",
             "cp -ar bower_components/components-bootstrap public/assets/bootstrap",
-            "rm -rf bower_components",
-            "git submodule update --init"
+            "rm -rf bower_components"            
         ],
         "update-ui-component": [
             "rm -rf public/assets/jquery",
@@ -87,8 +92,7 @@
             "cp -ar bower_components/jquery-ui public/assets/jquery-ui",
             "cp -ar bower_components/components-font-awesome public/assets/font-awesome",
             "cp -ar bower_components/components-bootstrap public/assets/bootstrap",
-            "rm -rf bower_components",
-            "git submodule sync"
+            "rm -rf bower_components"
         ]
     }
 }
