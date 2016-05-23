@@ -90,6 +90,5 @@
             "rm -rf bower_components",
             "git submodule sync"
         ]
-    },
-    "minimum-stability": "stable"
+    }
 }
